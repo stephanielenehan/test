@@ -1,0 +1,165 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 20px;
+    background-color: #659DBD;
+}
+
+h1,
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* If you want to use this code for your page, copy everything below this point and give attribution to: Responsive Navigation based on Malia Havlicek's codepen: https://codepen.io/maliahavlicek/pen/LYeBwNY */
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+    font-family: 'Droid Sans', sans-serif;
+}
+
+.menu {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+}
+
+.menu li a {
+    text-decoration: none;
+    align-self: center;
+    font-size: 18px;
+    padding: 14px 0;
+    transition: background .2s linear;
+}
+
+.nav-item {
+    background: #659DBD;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.nav-item li a {
+    color: white;
+}
+
+.nav-item li a:hover {
+    background: #FBEEC1;
+    color: #8D8741;
+}
+
+.menu #logo a {
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: peachpuff;
+    padding: 11px 0;
+}
+
+.menu #logo a:hover {
+    color: black;
+}
+
+#menuToggle,
+.show-mobile,
+.toggle {
+    display: none;
+}
+
+/* phones and portrait tablets */
+@media screen and (max-width: 768px) {
+
+    a.show-mobile {
+        text-decoration: none;
+        color: #595959;
+        display: inline-block;
+    }
+
+    #logo.hide-mobile {
+        display: none;
+    }
+
+    .toggle {
+        color: #595959;
+        padding: 0 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        width: calc(100% - 2.4rem);
+        text-align: left;
+        line-height: 40px;
+        cursor: pointer;
+        height: 40px;
+        font-size: 18px;
+        color: #595959;
+        background: #dbdbdb;
+        transition: all .1s linear;
+    }
+
+    #menuToggle:checked~ul.nav-item li {
+        opacity: 1;
+        visibility: visible;
+        transition: all .7s linear;
+    }
+
+    #menuToggle:checked~ul.nav-item {
+        height: 200px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 0px;
+        transition: height .3s linear;
+    }
+
+    .menu li {
+        display: flex;
+        /* magic */
+        align-self: center;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .menu li a {
+        width: 100%;
+        text-align: left;
+        align-self: center;
+        align-content: center;
+        margin-left: 1.2rem;
+    }
+}
+
+section {
+    padding: 2.4rem 1.2rem;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.bg-navy {
+    color: white;
+    background: #21336b;
+}
+
+form {
+    margin-top: 2rem;
+}
+
+.container-1 {
+    border-right: 20px red solid;
+    border-left: 20px red solid;
+    border-bottom: 20px red solid;
+    border-top: 20px red solid;
+}
